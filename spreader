@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Usage: spreader filetospread folder1 folder2 folder3..."
+
+for ((i=2;i<=$#;i++)); 
+do
+  mkdir ${!i}
+  cp $1 ${!i}/.
+done;
