@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $PATH = *"$HOME/bin" ]]
+then
+  echo "Installing in your home binary folder: $HOME/bin"
+  cp spreader $HOME/bin
+else
+  echo "Installing in your sudo binary folder: /usr/bin"
+  sudo cp spreader /usr/bin
+fi
